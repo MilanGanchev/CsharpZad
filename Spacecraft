@@ -1,0 +1,35 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.Write("Ship width: ");
+		double shipWidth = double.Parse(Console.ReadLine());
+		Console.Write("Ship length: ");
+		double shipLength = double.Parse(Console.ReadLine());
+		Console.Write("Ship Height: ");
+		double shipHeight  = double.Parse(Console.ReadLine());
+		Console.Write("Avarege astronaut height: ");
+		double avHeight = double.Parse(Console.ReadLine());
+		
+		double shipVol = shipWidth * shipLength * shipHeight;
+		double roomVol = (avHeight + 0.4) * 2 * 2;
+		double peop = shipVol / roomVol;
+		double people = Math.Round(peop);
+		
+		if(people > 10)
+		{
+			Console.WriteLine("The spaceship is too small.");
+		}
+		else if(people < 3)
+		{
+			Console.WriteLine("The spaceship is too big.");
+		}
+		else
+		{
+			Console.WriteLine("The spaceship holds " + people + " astronauts.");
+		}
+		
+	}
+}
