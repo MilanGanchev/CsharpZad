@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.Write("The price for 1 page is: ");
+		double pagePrice = double.Parse(Console.ReadLine());
+		Console.Write("The price for 1 cover is: ");
+		double coverPrice = double.Parse(Console.ReadLine());
+		Console.Write("The printing discount(percentage): ");
+		double discount = double.Parse(Console.ReadLine()) / 100;
+		Console.Write("The price for the designer is:");
+		double designer = double.Parse(Console.ReadLine());
+		Console.Write("The percentage the crew will cover: ");
+		double crewPercent = double.Parse(Console.ReadLine()) / 100;
+		
+		double bookPrice = 899 * pagePrice + 2 * coverPrice;
+		double disBookPrice = bookPrice - bookPrice * discount;
+		double desBookPrice = disBookPrice + designer;
+		double finBookPrice = desBookPrice - desBookPrice * crewPercent;
+		double finalPrice = Math.Round(finBookPrice, 2);
+		
+		Console.WriteLine("Avtonom should pay " + finalPrice + " BGN.");
+	}
+}
