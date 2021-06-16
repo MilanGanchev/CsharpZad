@@ -1,0 +1,66 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.WriteLine("Ladies and gentlemen... we're fucked.");
+		Console.Write("Write a month Here: ");
+		string month = Console.ReadLine();
+		Console.Write("Time of day: ");
+		string time = Console.ReadLine();
+		Console.Write("Number of people: ");
+		int number = int.Parse(Console.ReadLine());
+		Console.Write("Hours spent: ");
+		int hours = int.Parse(Console.ReadLine());
+		
+		
+		if(time == "day")
+		{
+			time = "day";
+		}
+		else if(time == "night")
+		{
+			time = "night";
+		}
+		else
+		{
+			Console.WriteLine("Wrong ye fokin ritard.");
+		}
+		
+		switch(month)
+            {
+			case "December":
+            case "January":
+			case "February":
+                    Console.WriteLine("Winter");
+                    break;
+			case "March":
+			case "April":
+			case "May":
+                    Console.WriteLine("Spring");
+                    break;
+			case "June":
+			case "July":
+			case "August":
+                    Console.WriteLine("Summer");
+                    break;
+			case "September":
+			case "October":
+			case "November":
+                    Console.WriteLine("Autum");
+                    break;
+			case "may":
+			case "jan":
+			case "ap":
+				if(time == "day")
+				{
+					
+				}
+				break;
+                default:
+                    Console.WriteLine("You fucking donkey!");
+                    break;
+            }
+	}
+}
