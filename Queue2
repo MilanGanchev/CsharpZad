@@ -29,7 +29,7 @@ class Example
         {
             Console.WriteLine(number);
         }
-        
+       
         string[] array2 = new string[numbers.Count * 2];
         numbers.CopyTo(array2, numbers.Count);
         
